@@ -67,14 +67,12 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/mpage,%{_mandir}/man1}
 
 %{__make} PREFIX=$RPM_BUILD_ROOT%{_prefix} install
 
-gzip -9nf CHANGES README NEWS TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES README NEWS TODO
 %attr(755,root,root) %{_bindir}/mpage
 %{_mandir}/*/*
 %{_libdir}/mpage
