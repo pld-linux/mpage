@@ -5,7 +5,7 @@ Summary(pl):	Narzêdzie pozwalaj±ce umie¶ciæ wiele strona na jednym wydruku
 Summary(tr):	Birden fazla metin sayfasýný tek bir PostScript sayfasýna yerleþtirir
 Name:		mpage
 Version:	2.5.1
-Release:	6
+Release:	7
 License:	BSD
 Group:		Applications/Publishing
 Source0:	http://www.mesa.nl/pub/mpage/%{name}251pre.tgz
@@ -38,12 +38,12 @@ PostScript. Il reconnait plusieurs mises en pages.
 
 %description -l pl
 Mpage pobiera czyta pliki z czystym tekstem lub PostScriptem(TM),
-zmiejsza rozmiar tekstu i drukuje na drukarce PostScriptowej
+zmniejsza rozmiar tekstu i drukuje na drukarce postscriptowej
 umieszczaj±c wiele stron na jednym wydruku. Mpage jest bardzo
 u¿yteczny do drukowania du¿ych plików bez marnowania ton papieru.
 Mpage obs³uguje wiele opcji dotycz±cych wygl±du drukowanych stron.
-Zainstaluj mpage je¶li potrzebujesz narzêdzia do drukowania du¿ych
-dokumentów bez marnowania papieru.
+Warto zainstalowaæ mpage je¶li potrzebujemy narzêdzia do drukowania
+du¿ych dokumentów bez marnowania papieru.
 
 %description -l tr
 mpage çok sayfalý ASCII metinlerini tek bir PostScript sayfasýna
@@ -60,13 +60,15 @@ olanak verir.
 %patch5 -p1
 
 %build
-%{__make} OPT_FLAGS="%{rpmcflags}"
+%{__make} \
+	OPT_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/mpage,%{_mandir}/man1}
 
-%{__make} PREFIX=$RPM_BUILD_ROOT%{_prefix} install
+%{__make} install \
+	PREFIX=$RPM_BUILD_ROOT%{_prefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
