@@ -61,7 +61,7 @@ olanak verir.
 %patch5 -p1
 
 %build
-%{__make} OPT_FLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
+%{__make} OPT_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
