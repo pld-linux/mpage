@@ -15,33 +15,35 @@ URL:		http://www.mesa.nl/index_e.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The mpage utility takes plain text files or PostScript(TM) documents as
-input, reduces the size of the text, and prints the files on a PostScript
-printer with several pages on each sheet of paper.  Mpage is very useful
-for viewing large printouts without using up tons of paper.  Mpage supports
-many different layout options for the printed pages.  Mpage should be
-installed if you need a useful utility for viewing long text documents
-without wasting paper.
+The mpage utility takes plain text files or PostScript(TM) documents
+as input, reduces the size of the text, and prints the files on a
+PostScript printer with several pages on each sheet of paper. Mpage is
+very useful for viewing large printouts without using up tons of
+paper. Mpage supports many different layout options for the printed
+pages. Mpage should be installed if you need a useful utility for
+viewing long text documents without wasting paper.
 
 %description -l de
 mpage formatiert mehrere Seiten ASCII-Text in eine einzelne
 PostScript-Seite. Es unterstützt eine große Auswahl von Layouts.
 
 %description -l fr
-mpage formate plusieurs pages de texte ASCII en un seule en PostScript. Il
-reconnait plusieurs mises en pages.
+mpage formate plusieurs pages de texte ASCII en un seule en
+PostScript. Il reconnait plusieurs mises en pages.
 
 %description -l pl
-Mpage pobiera czyta pliki z czystym tekstem lub PostScriptem(TM), zmiejsza
-rozmiar tekstu i drukuje na drukarce PostScriptowej umieszczaj±c wiele
-stron na jednym wydruku. Mpage jest bardzo u¿yteczny do drukowania du¿ych
-plików bez marnowania ton papieru. Mpage obs³uguje wiele opcji dotycz±cych
-wygl±du drukowanych stron.  Zainstaluj mpage je¶li potrzebujesz narzêdzia
-do drukowania du¿ych dokumentów bez marnowania papieru.
+Mpage pobiera czyta pliki z czystym tekstem lub PostScriptem(TM),
+zmiejsza rozmiar tekstu i drukuje na drukarce PostScriptowej
+umieszczaj±c wiele stron na jednym wydruku. Mpage jest bardzo
+u¿yteczny do drukowania du¿ych plików bez marnowania ton papieru.
+Mpage obs³uguje wiele opcji dotycz±cych wygl±du drukowanych stron.
+Zainstaluj mpage je¶li potrzebujesz narzêdzia do drukowania du¿ych
+dokumentów bez marnowania papieru.
 
 %description -l tr
-mpage çok sayfalý ASCII metinlerini tek bir PostScript sayfasýna biçimler.
-Sayfanýn son þeklinin deðiþik biçimlerde elde edilebilmesine olanak verir.
+mpage çok sayfalý ASCII metinlerini tek bir PostScript sayfasýna
+biçimler. Sayfanýn son þeklinin deðiþik biçimlerde elde edilebilmesine
+olanak verir.
 
 %prep
 %setup -q
