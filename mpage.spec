@@ -51,7 +51,7 @@ olanak verir.
 %patch0 -p1
 
 %build
-%{__make} OPT_FLAGS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}"
+%{__make} OPT_FLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
