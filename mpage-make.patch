@@ -28,7 +28,7 @@ diff -urN mpage-2.4.orig/Makefile mpage-2.4/Makefile
  
  # Linux:
 -CFLAGS = -O2 -s $(DEFS) -Wall
-+CFLAGS = ${RPM_OPT_FLAGS} -s $(DEFS) -Wall
++CFLAGS = ${OPT_FLAGS} -s $(DEFS) -Wall
  
  # AIX (xlC on aix 4):
  #CFLAGS = -O2 -s $(DEFS)
