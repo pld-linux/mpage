@@ -9,6 +9,7 @@ Release:	6
 License:	BSD
 Group:		Applications/Publishing
 Source0:	http://www.mesa.nl/pub/mpage/%{name}251pre.tgz
+# Source0-md5:	04460353ae61405a8fc58545bad143a9
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-debian.patch
