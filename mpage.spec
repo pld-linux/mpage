@@ -1,7 +1,7 @@
 Summary:	A tool for printing multiple pages of text on each printed page
 Summary(de):	plaziert mehrere Textseiten auf eine einzelne Postscript-Seite
 Summary(fr):	Place plusieurs pages de texte sur une simple page postscript
-Summary(pl):	Narzêdzie pozwalaj±ce umie¶ciæ wiele strona na jednym wydruku
+Summary(pl):	Narzêdzie pozwalaj±ce umie¶ciæ wiele stron na jednym wydruku
 Summary(tr):	Birden fazla metin sayfasýný tek bir PostScript sayfasýna yerleþtirir
 Name:		mpage
 Version:	2.5.1
