@@ -8,8 +8,6 @@ Version:	2.5.1
 Release:	6
 License:	BSD
 Group:		Applications/Publishing
-Group(de):	Applikationen/Publizieren
-Group(pl):	Aplikacje/Publikowanie
 Source0:	http://www.mesa.nl/pub/mpage/%{name}251pre.tgz
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-config.patch
