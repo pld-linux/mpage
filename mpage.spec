@@ -12,7 +12,7 @@ Group(pl):	Aplikacje/Publikowanie
 Source0:	http://www.mesa.nl/pub/mpage/%{name}-%{version}.tgz
 Patch0:		mpage-make.patch
 URL:		http://www.mesa.nl/index_e.html
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The mpage utility takes plain text files or PostScript(TM) documents as
