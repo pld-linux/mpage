@@ -48,7 +48,7 @@ Sayfanýn son þeklinin deðiþik biçimlerde elde edilebilmesine olanak verir.
 %patch0 -p1
 
 %build
-make 
+make OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
