@@ -1,16 +1,17 @@
-Summary:	A tool for printing multiple pages of text on each printed page.
+Summary:	A tool for printing multiple pages of text on each printed page
 Summary(de):	plaziert mehrere Textseiten auf eine einzelne Postscript-Seite
-Summary(fr):	Place plusieurs pages de texte sur une simple page postscript.
-Summary(pl):	Narzêdzie pozwalaj±ce umie¶ciæ wiele strona na jednym wydruku.
+Summary(fr):	Place plusieurs pages de texte sur une simple page postscript
+Summary(pl):	Narzêdzie pozwalaj±ce umie¶ciæ wiele strona na jednym wydruku
 Summary(tr):	Birden fazla metin sayfasýný tek bir PostScript sayfasýna yerleþtirir
 Name:		mpage
 Version:	2.5
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/Publishing
+Group(de):	Applikationen/Publizieren
 Group(pl):	Aplikacje/Publikowanie
 Source0:	http://www.mesa.nl/pub/mpage/%{name}-%{version}.tgz
-Patch0:		mpage-make.patch
+Patch0:		%{name}-make.patch
 URL:		http://www.mesa.nl/index_e.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,7 +51,7 @@ olanak verir.
 %patch0 -p1
 
 %build
-%{__make} OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} OPT_FLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -58,7 +59,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/mpage,%{_mandir}/man1}
 
 %{__make} PREFIX=$RPM_BUILD_ROOT%{_prefix} install
 
-gzip -9nf CHANGES README NEWS TODO $RPM_BUILD_ROOT%{_mandir}/*/*
+gzip -9nf CHANGES README NEWS TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
