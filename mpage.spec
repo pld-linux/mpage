@@ -50,13 +50,13 @@ olanak verir.
 %patch0 -p1
 
 %build
-make OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/mpage,%{_mandir}/man1}
 
-make PREFIX=$RPM_BUILD_ROOT%{_prefix} install
+%{__make} PREFIX=$RPM_BUILD_ROOT%{_prefix} install
 
 gzip -9nf CHANGES README NEWS TODO $RPM_BUILD_ROOT%{_mandir}/*/*
 
