@@ -4,14 +4,19 @@ Summary(fr):	Place plusieurs pages de texte sur une simple page postscript
 Summary(pl):	Narzêdzie pozwalaj±ce umie¶ciæ wiele strona na jednym wydruku
 Summary(tr):	Birden fazla metin sayfasýný tek bir PostScript sayfasýna yerleþtirir
 Name:		mpage
-Version:	2.5
-Release:	2
+Version:	2.5.1
+Release:	6
 License:	BSD
 Group:		Applications/Publishing
 Group(de):	Applikationen/Publizieren
 Group(pl):	Aplikacje/Publikowanie
-Source0:	http://www.mesa.nl/pub/mpage/%{name}-%{version}.tgz
+Source0:	http://www.mesa.nl/pub/mpage/%{name}251pre.tgz
 Patch0:		%{name}-make.patch
+Patch1:		%{name}-config.patch
+Patch2:		%{name}-debian.patch
+Patch3:		%{name}-tempfile.patch
+Patch4:		%{name}-j.patch
+Patch5:		%{name}-level3.patch
 URL:		http://www.mesa.nl/index_e.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,6 +54,11 @@ olanak verir.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
+%patch5 -p1
 
 %build
 %{__make} OPT_FLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
