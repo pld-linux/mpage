@@ -1,0 +1,34 @@
+diff -urN mpage-2.4.orig/Makefile mpage-2.4/Makefile
+--- mpage-2.4.orig/Makefile	Thu Sep  5 00:20:45 1996
++++ mpage-2.4/Makefile	Sat Feb 26 18:37:35 2000
+@@ -29,7 +29,7 @@
+ 
+ # Set this to an ANSI compatible C compiler (preferably gcc)
+ #CC=cc
+-CC=gcc
++#CC=gcc
+ 
+ 
+ #
+@@ -48,10 +48,10 @@
+ SPOOL_TYPE=BSD_SPOOLER
+ 
+ # PREFIX=e:/usr		# OS/2 type
+-PREFIX=/usr/local
++PREFIX=/usr/
+ BINDIR=$(PREFIX)/bin
+ LIBDIR=$(PREFIX)/lib
+-MANDIR=$(PREFIX)/man/man1
++MANDIR=$(PREFIX)/share/man/man1
+ 
+ 
+ # Unix extensions
+@@ -84,7 +84,7 @@
+ # If you are using gcc, you probably don't need to change anything here.
+ 
+ # Linux:
+-CFLAGS = -O2 -s $(DEFS) -Wall
++CFLAGS = ${RPM_OPT_FLAGS} -s $(DEFS) -Wall
+ 
+ # AIX (xlC on aix 4):
+ #CFLAGS = -O2 -s $(DEFS)
