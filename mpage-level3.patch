@@ -1,0 +1,12 @@
+diff -urN mpage-2.5.orig/mpage.c mpage-2.5/mpage.c
+--- mpage-2.5.orig/mpage.c	Fri Feb  9 15:02:30 2001
++++ mpage-2.5/mpage.c	Fri Feb  9 15:03:54 2001
+@@ -216,7 +216,7 @@
+     FILE * charfp;
+     char buf[LINESIZE];
+ 
+-    fprintf(outfd, "%%!PS-Adobe-2.0\n");
++    fprintf(outfd, "%%!PS-Adobe-3.0\n");
+     fprintf(outfd, "%%%%DocumentFonts: %s Times-Bold\n", fontname);
+     fprintf(outfd, "%%%%Title: %s (%s)\n", name, MPAGE);
+     fprintf(outfd, "%%%%Creator: %s %s\n", MPAGE, VERSION);
