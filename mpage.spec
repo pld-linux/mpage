@@ -1,8 +1,8 @@
 Summary:	A tool for printing multiple pages of text on each printed page
-Summary(de):	plaziert mehrere Textseiten auf eine einzelne Postscript-Seite
-Summary(fr):	Place plusieurs pages de texte sur une simple page postscript
-Summary(pl):	Narzêdzie pozwalaj±ce umie¶ciæ wiele stron na jednym wydruku
-Summary(tr):	Birden fazla metin sayfasını tek bir PostScript sayfasına yerleştirir
+Summary(de.UTF-8):   plaziert mehrere Textseiten auf eine einzelne Postscript-Seite
+Summary(fr.UTF-8):   Place plusieurs pages de texte sur une simple page postscript
+Summary(pl.UTF-8):   NarzÄ™dzie pozwalajÄ…ce umieÅ›ciÄ‡ wiele stron na jednym wydruku
+Summary(tr.UTF-8):   Birden fazla metin sayfasÄ±nÄ± tek bir PostScript sayfasÄ±na yerleÅŸtirir
 Name:		mpage
 Version:	2.5.1
 Release:	7
@@ -28,26 +28,26 @@ paper. Mpage supports many different layout options for the printed
 pages. Mpage should be installed if you need a useful utility for
 viewing long text documents without wasting paper.
 
-%description -l de
+%description -l de.UTF-8
 mpage formatiert mehrere Seiten ASCII-Text in eine einzelne
-PostScript-Seite. Es unterstützt eine große Auswahl von Layouts.
+PostScript-Seite. Es unterstÃ¼tzt eine groÃŸe Auswahl von Layouts.
 
-%description -l fr
+%description -l fr.UTF-8
 mpage formate plusieurs pages de texte ASCII en un seule en
 PostScript. Il reconnait plusieurs mises en pages.
 
-%description -l pl
+%description -l pl.UTF-8
 Mpage pobiera czyta pliki z czystym tekstem lub PostScriptem(TM),
 zmniejsza rozmiar tekstu i drukuje na drukarce postscriptowej
-umieszczaj±c wiele stron na jednym wydruku. Mpage jest bardzo
-u¿yteczny do drukowania du¿ych plików bez marnowania ton papieru.
-Mpage obs³uguje wiele opcji dotycz±cych wygl±du drukowanych stron.
-Warto zainstalowaæ mpage je¶li potrzebujemy narzêdzia do drukowania
-du¿ych dokumentów bez marnowania papieru.
+umieszczajÄ…c wiele stron na jednym wydruku. Mpage jest bardzo
+uÅ¼yteczny do drukowania duÅ¼ych plikÃ³w bez marnowania ton papieru.
+Mpage obsÅ‚uguje wiele opcji dotyczÄ…cych wyglÄ…du drukowanych stron.
+Warto zainstalowaÄ‡ mpage jeÅ›li potrzebujemy narzÄ™dzia do drukowania
+duÅ¼ych dokumentÃ³w bez marnowania papieru.
 
-%description -l tr
-mpage çok sayfalı ASCII metinlerini tek bir PostScript sayfasına
-biçimler. Sayfanın son şeklinin değişik biçimlerde elde edilebilmesine
+%description -l tr.UTF-8
+mpage Ã§ok sayfalÄ± ASCII metinlerini tek bir PostScript sayfasÄ±na
+biÃ§imler. SayfanÄ±n son ÅŸeklinin deÄŸiÅŸik biÃ§imlerde elde edilebilmesine
 olanak verir.
 
 %prep
