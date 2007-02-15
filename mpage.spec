@@ -5,7 +5,7 @@ Summary(pl.UTF-8):	Narzędzie pozwalające umieścić wiele stron na jednym wydr
 Summary(tr.UTF-8):	Birden fazla metin sayfasını tek bir PostScript sayfasına yerleştirir
 Name:		mpage
 Version:	2.5.1
-Release:	7
+Release:	8
 License:	BSD
 Group:		Applications/Publishing
 Source0:	http://www.mesa.nl/pub/mpage/%{name}251pre.tgz
@@ -16,6 +16,7 @@ Patch2:		%{name}-debian.patch
 Patch3:		%{name}-tempfile.patch
 Patch4:		%{name}-j.patch
 Patch5:		%{name}-level3.patch
+Patch6:		%{name}-incomplete-type.patch
 URL:		http://www.mesa.nl/index_e.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -58,6 +59,7 @@ olanak verir.
 %patch3 -p1
 %patch4 -p1
 %patch5 -p1
+%patch6 -p1
 
 %build
 %{__make} \
