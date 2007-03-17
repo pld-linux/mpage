@@ -63,14 +63,16 @@ olanak verir.
 
 %build
 %{__make} \
-	OPT_FLAGS="%{rpmcflags}"
+	OPT_FLAGS="%{rpmcflags}" \
+	LIBDIR="%{_libdir}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/mpage,%{_mandir}/man1}
 
 %{__make} install \
-	PREFIX=$RPM_BUILD_ROOT%{_prefix}
+	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
+	LIBDIR=$RPM_BUILD_ROOT%{_libdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
