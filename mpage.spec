@@ -4,20 +4,16 @@ Summary(fr.UTF-8):	Place plusieurs pages de texte sur une simple page postscript
 Summary(pl.UTF-8):	Narzędzie pozwalające umieścić wiele stron na jednym wydruku
 Summary(tr.UTF-8):	Birden fazla metin sayfasını tek bir PostScript sayfasına yerleştirir
 Name:		mpage
-Version:	2.5.1
-Release:	8
+Version:	2.5.8
+Release:	1
 License:	BSD
 Group:		Applications/Publishing
-Source0:	http://www.mesa.nl/pub/mpage/%{name}251pre.tgz
-# Source0-md5:	04460353ae61405a8fc58545bad143a9
+Source0:	https://www.mesa.nl/pub/mpage/%{name}-%{version}.tgz
+# Source0-md5:	b697bf0ead7bbe32f1588e3a1155aec4
 Patch0:		%{name}-make.patch
-Patch1:		%{name}-config.patch
-Patch2:		%{name}-debian.patch
-Patch3:		%{name}-tempfile.patch
 Patch4:		%{name}-j.patch
 Patch5:		%{name}-level3.patch
-Patch6:		%{name}-incomplete-type.patch
-URL:		http://www.mesa.nl/index_e.html
+URL:		https://www.mesa.nl/pub/mpage/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -54,25 +50,19 @@ olanak verir.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
 %patch4 -p1
 %patch5 -p1
-%patch6 -p1
 
 %build
 %{__make} \
-	OPT_FLAGS="%{rpmcflags}" \
-	LIBDIR="%{_libdir}"
+	OPT_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/mpage,%{_mandir}/man1}
+#install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 %{__make} install \
-	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
-	LIBDIR=$RPM_BUILD_ROOT%{_libdir}
+	PREFIX=$RPM_BUILD_ROOT%{_prefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -81,5 +71,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES README NEWS TODO
 %attr(755,root,root) %{_bindir}/mpage
-%{_mandir}/*/*
-%{_libdir}/mpage
+%{_datadir}/mpage
+%{_mandir}/man1/mpage.1*
